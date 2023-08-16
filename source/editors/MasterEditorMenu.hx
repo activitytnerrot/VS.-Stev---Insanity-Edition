@@ -22,9 +22,7 @@ class MasterEditorMenu extends MusicBeatState
 		'Dialogue Editor',
 		'Dialogue Portrait Editor',
 		'Character Editor',
-		#if debug
-		'Stage Editor',
-		#end
+		'Stage Editor', //UNFINISHED.
 		'Chart Editor'
 	];
 	private var grpTexts:FlxTypedGroup<Alphabet>;
