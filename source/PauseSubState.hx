@@ -25,7 +25,7 @@ class PauseSubState extends MusicBeatSubstate
 	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Replay Cutscene', 'Change Difficulty', 'Change Modifiers', 'Options Menu', 'Tools', 'Exit'];
 	var difficultyChoices = [];
 	var exitChoices = ['Exit To Song Menu', 'Exit To Main Menu', 'Exit Game', 'BACK'];
-	var devChoices = ['Skip Time', 'End Song', 'Toggle Practice Mode', 'Toggle Botplay', 'Leave Charting Mode', 'BACK'];
+	var devChoices = ['Skip Time', 'End Song', 'Toggle Noob Mode', 'Toggle Dumbass Mode', 'Leave Charting Mode', 'BACK'];
 	var curSelected:Int = 0;
 	public static var changedOptions:Bool = false;
 	public static var transferPlayState:Bool = false;
@@ -120,7 +120,7 @@ class PauseSubState extends MusicBeatSubstate
 		blueballedTxt.active = false;
 		add(blueballedTxt);
 
-		practiceText = new FlxText(20, 15 + 96, 0, "Practice Mode", 32);
+		practiceText = new FlxText(20, 15 + 96, 0, "Noob Mode", 32);
 		practiceText.scrollFactor.set();
 		practiceText.setFormat(Paths.font('vcr.ttf'), 32);
 		practiceText.x = FlxG.width - (practiceText.width + 20);
@@ -341,13 +341,13 @@ class PauseSubState extends MusicBeatSubstate
 							transferPlayState = false;
 							close();
 							PlayState.instance.finishSong(true);
-						case 'Toggle Botplay':
+						case 'Toggle Dumbass Mode':
 							PlayState.instance.cpuControlled = !PlayState.instance.cpuControlled;
 							PlayState.changedDifficulty = true;
 							PlayState.instance.hud.botplayTxt.visible = PlayState.instance.cpuControlled;
 							PlayState.instance.hud.botplayTxt.alpha = 1;
 							PlayState.instance.hud.botplaySine = 0;
-						case 'Toggle Practice Mode':
+						case 'Toggle Noob Mode':
 							PlayState.instance.practiceMode = !PlayState.instance.practiceMode;
 							PlayState.changedDifficulty = true;
 							practiceText.visible = PlayState.instance.practiceMode;
