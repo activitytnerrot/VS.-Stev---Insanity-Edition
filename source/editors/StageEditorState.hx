@@ -21,7 +21,7 @@ import openfl.net.FileReference;
 /**
 * State used to create and edit `Stage` jsons.
 */
-class StageEditorState extends MusicBeatState
+class StageEditorState extends MusicBeatState //THIS IS UNFINISHED.
 {
 	var music:EditorMusic;
 	var stageFile:StageFile = null;
