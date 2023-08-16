@@ -64,7 +64,7 @@ class StoryMenuState extends MusicBeatState
 		hscript = new Hscript(Paths.hscript('scripts/menus/StoryMenu'));
 		#end
 
-		scoreText = new FlxText(10, 10, 0, "SCORE: 69420", 36);
+		scoreText = new FlxText(10, 10, 0, "STEV POINTS: 69420", 36);
 		scoreText.setFormat("VCR OSD Mono", 32);
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
@@ -197,7 +197,7 @@ class StoryMenuState extends MusicBeatState
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, CoolUtil.clamp(elapsed * 30, 0, 1)));
 		if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
 
-		scoreText.text = "WEEK SCORE:" + lerpScore;
+		scoreText.text = "STEV POINTS:" + lerpScore;
 
 		if (!movedBack && !selectedWeek)
 		{
