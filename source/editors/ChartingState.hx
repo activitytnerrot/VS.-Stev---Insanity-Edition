@@ -96,7 +96,7 @@ class ChartingState extends MusicBeatState
 
 	var eventStuff:Array<Array<String>> =
 	[
-		['', "No Event."],
+		['', "This event is the coolest, it does NOTHING! Yeah. that's right."],
 		['Add Subtitle', "Adds a subtitle.\nValue 1: Text.\nValue 2: Color (write as 0xffffffff)\nValue 3: Duration before fadeout in STEPS.\n(Add to the end of value 2, with a comma to seperate.)"],
 		['Alt Idle Animation', "Sets a specified suffix after the idle animation name.\nYou can use this to trigger 'idle-alt' if you set\nValue 2 to -alt\n\nValue 1: Character to set (Dad, BF or GF)\nValue 2: New suffix (Leave it blank to disable)"],
 		['BG Freaks Expression', "Should be used only in \"school\" Stage!"],
@@ -272,7 +272,7 @@ class ChartingState extends MusicBeatState
 		},
 
 		options: {
-			speed: 1,
+			speed: 3,
 			mania: Note.defaultMania,
 			dangerMiss: false,
 			crits: false,
