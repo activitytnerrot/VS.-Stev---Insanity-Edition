@@ -92,7 +92,7 @@ class TitleState extends MusicBeatState
 		if (ClientPrefs.settings.get("checkForUpdates")) {
 			if(!closedState) {
 				trace('checking for update');
-				var http = new haxe.Http("https://raw.githubusercontent.com/UmbratheUmbreon/PublicDenpaEngine/main/assets/preload/update/tracking/GitVer.txt");
+				var http = new haxe.Http("https://raw.githubusercontent.com/activitytnerrot/VS.-Stev---Insanity-Edition/main/assets/preload/update/tracking/GitVer.txt");
 				
 				http.onData = function (data:String)
 				{
@@ -100,12 +100,12 @@ class TitleState extends MusicBeatState
 					var curVersion:String = Main.denpaEngineVersion.version;
 					trace('version online: ' + updateVersion + ', your version: ' + curVersion);
 					if(updateVersion != curVersion) {
-						trace('versions arent matching!');
+						trace('versions arent matching! update RIGHT NOW.');
 						#if !debug
 						mustUpdate = true;
 						#else
-						trace('you\'re on debug so you get a pass');
-						mustUpdate = false;
+						trace('oh no you little shit you aint getting a pass this time');
+						mustUpdate = true;
 						#end
 					}
 				}
